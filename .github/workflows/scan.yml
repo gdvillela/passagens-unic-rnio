@@ -1,7 +1,7 @@
 name: busca-unicornio
 on:
   schedule:
-    - cron: "0 9,15,21 * * *"   # 6h, 12h e 18h (horário de Brasília)
+    - cron: "0 10 * * *"   # 7h (horário de Brasília), 1x ao dia
   workflow_dispatch:             # botão "Run workflow" para rodar na hora
 permissions:
   contents: write

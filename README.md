@@ -56,7 +56,7 @@ Os limiares ficam em `unicornio/config.py`, junto com as listas de capitais bras
 | API | Custo | Histórico de preços | Papel aqui |
 |---|---|---|---|
 | **Travelpayouts / Aviasales Data API** | Grátis (cadastro de afiliado) | Preços em cache das buscas dos últimos dias; aceita "qualquer destino" | Coletor principal |
-| **Google Flights via Apify** (actor `lergassy/google-flights-api`) | ~US$ 0,20 por 1.000 linhas; uma varredura de 3 origens x 6 meses sai por volta de US$ 0,02 | Sim: faixa típica e ~60 dias de histórico da rota | Coletor (modo "qualquer destino") e validador |
+| **Google Flights via Apify** (actor `lergassy/google-flights-api`) | ~US$ 0,20 por 1.000 linhas; uma varredura de 3 origens x 6 meses traz ~1.250 linhas, cerca de US$ 0,25 | Sim: faixa típica e ~60 dias de histórico da rota | Coletor (modo "qualquer destino") e validador |
 | **Google Flights via SerpAPI** | Plano grátis ~100 buscas/mês; pagos a partir de ~US$ 75/mês | Sim: `price_insights` traz faixa típica e histórico da rota | Validador + base externa |
 | **Duffel** | Busca grátis; cobra por reserva | Não | Validador ao vivo |
 | Amadeus Self-Service | **Encerrado em julho de 2026** | — | Não usar |
