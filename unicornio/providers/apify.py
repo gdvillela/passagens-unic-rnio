@@ -11,12 +11,23 @@ Troque o actor com APIFY_ACTOR se quiser outro.
 """
 import json
 import os
-from datetime import date
+from datetime import date, timedelta
 from .base import Provider, Oferta, http_json
 from .. import config
 
 ACTOR = os.getenv("APIFY_ACTOR", "lergassy~google-flights-api")
 URL = "https://api.apify.com/v2/acts/{actor}/run-sync-get-dataset-items"
+
+
+def dia_do_mes(mes, hoje=None):
+    """Escolhe o dia de ida para o mês. Muda a cada dia (passo 11 em 28 dias), então em
+    4 semanas todos os dias de 1 a 28 são cobertos, sem aumentar o custo."""
+    hoje = hoje or date.today()
+    dia = (hoje.toordinal() * 11) % 28 + 1
+    alvo = date(int(mes[:4]), int(mes[5:7]), dia)
+    if alvo <= hoje + timedelta(days=2):          # mês atual: não buscar data passada
+        alvo = hoje + timedelta(days=3)
+    return alvo.isoformat()
 
 
 def _pega(d, *chaves, default=None):
@@ -111,7 +122,7 @@ class ApifyGoogleFlights(Provider):
         else:
             entrada = {"origin": origem_aero, "exploreAnywhere": True, "maxDestinations": 200}
             if mes:
-                entrada["departureDate"] = f"{mes}-15" if len(mes) == 7 else mes
+                entrada["departureDate"] = dia_do_mes(mes) if len(mes) == 7 else mes
             itens = self._rodar(entrada, f"{origem}-explore-{mes or 'flex'}")
             out = [self._oferta(i, origem) for i in itens if i.get("type") not in ("search", "notice")]
         out = [o for o in out if o]
