@@ -104,7 +104,7 @@ def relatorio_html(resultados, path):
         link = f'<a href="{html.escape(o.link)}">abrir</a>' if o.link else ""
         linhas.append(
             f"<tr class='{r.nivel}'><td>{EMOJI.get(r.nivel,'')} {r.nivel}</td><td>{o.origem}→{o.destino}</td>"
-            f"<td>{html.escape(config.nome(o.destino))}</td><td>{html.escape(config.regiao(o.destino))}</td>"
+            f"<td>{html.escape(config.nome(o.destino, o.extra.get('cidade')))}</td><td>{html.escape(config.regiao(o.destino, o.extra.get('pais')))}</td>"
             f"<td>{o.ida}{' / ' + o.volta if o.volta else ''}</td><td>R$ {o.preco:,.0f}</td>"
             f"<td>R$ {r.base:,.0f}</td><td>-{r.desconto:.0%}</td><td>{r.z:.1f}</td><td>{r.fonte_base} (n={r.amostras})</td>"
             f"<td>{html.escape(o.cia)}</td><td>{o.escalas}</td><td>{val_txt}</td><td>{link}</td></tr>")

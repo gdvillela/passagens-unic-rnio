@@ -27,7 +27,7 @@ class Resultado:
 
     def resumo(self):
         o = self.oferta
-        return (f"{o.origem}->{o.destino} ({config.nome(o.destino)}, {config.regiao(o.destino)}) "
+        return (f"{o.origem}->{o.destino} ({config.nome(o.destino, o.extra.get('cidade'))}, {config.regiao(o.destino, o.extra.get('pais'))}) "
                 f"ida {o.ida}{' volta ' + o.volta if o.volta else ''}: R$ {o.preco:,.0f} "
                 f"vs base R$ {self.base:,.0f} (-{self.desconto:.0%}, z={self.z:.1f}, {self.fonte_base}, n={self.amostras})")
 

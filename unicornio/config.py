@@ -29,16 +29,18 @@ EXTERIOR = {
 }
 
 
-def regiao(iata: str) -> str:
-    if iata in BRASIL:
+def regiao(iata: str, pais: str = None) -> str:
+    if iata in BRASIL or pais == "Brasil":
         return "Brasil"
     for reg, cidades in EXTERIOR.items():
         if iata in cidades:
             return reg
-    return "Outros"
+    return pais or "Outros"
 
 
-def nome(iata: str) -> str:
+def nome(iata: str, cidade: str = None) -> str:
+    if cidade:
+        return cidade
     if iata in BRASIL:
         return BRASIL[iata]
     for cidades in EXTERIOR.values():

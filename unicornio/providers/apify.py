@@ -67,8 +67,9 @@ class ApifyGoogleFlights(Provider):
     def _rodar(self, entrada, rotulo):
         base = {"currency": config.MOEDA, "market": "BR", "language": "pt-BR",
                 "includeSearchSummary": True, "includeRunSummary": False}
+        corpo = {k: v for k, v in {**base, **entrada}.items() if v is not None}
         itens = http_json(URL.format(actor=ACTOR), params={"token": self.token, "timeout": 280},
-                          body={**base, **entrada}, timeout=300)
+                          body=corpo, timeout=300)
         if self.salvar_bruto:
             os.makedirs("apify_bruto", exist_ok=True)
             with open(f"apify_bruto/{date.today()}_{rotulo}.json", "w", encoding="utf-8") as f:
@@ -93,7 +94,8 @@ class ApifyGoogleFlights(Provider):
             duracao_min=int(_pega(it, "totalDurationMinutes", "durationMinutes", default=0) or 0),
             link=_pega(it, "googleFlightsUrl", "url", "link", default=""),
             faixa_tipica=_faixa(it) or faixa,
-            extra={"price_level": _pega(it, "priceLevel")},
+            extra={"price_level": _pega(it, "priceLevel"),
+                   "cidade": _pega(it, "city", "destinationCity"), "pais": _pega(it, "country")},
         )
 
     def buscar(self, origem, destino=None, mes=None, ida=None, volta=None):

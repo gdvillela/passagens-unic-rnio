@@ -3,6 +3,7 @@ from typing import Optional
 import json
 import urllib.request
 import urllib.parse
+import urllib.error
 
 
 @dataclass
@@ -47,5 +48,9 @@ def http_json(url, params=None, headers=None, body=None, timeout=30):
     req = urllib.request.Request(url, data=data, headers=headers or {})
     if data is not None:
         req.add_header("Content-Type", "application/json")
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode())
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        detalhe = e.read().decode(errors="replace")[:300]
+        raise RuntimeError(f"HTTP {e.code}: {detalhe}") from None
