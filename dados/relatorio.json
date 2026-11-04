@@ -14,7 +14,9 @@
   "faixa_tipica": null,
   "extra": {
    "price_level": null,
-   "validado": null
+   "cidade": "Bora Bora",
+   "pais": "Polinésia Francesa",
+   "validado": "apify_gflights: R$ 8,716"
   },
   "nivel": "otima",
   "desconto": 0.614,
@@ -37,7 +39,9 @@
   "faixa_tipica": null,
   "extra": {
    "price_level": null,
-   "validado": null
+   "cidade": "Taiti",
+   "pais": "Polinésia Francesa",
+   "validado": "apify_gflights: R$ 6,626"
   },
   "nivel": "otima",
   "desconto": 0.611,
@@ -59,7 +63,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Bora Bora",
+   "pais": "Polinésia Francesa"
   },
   "nivel": "boa",
   "desconto": 0.548,
@@ -81,7 +87,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Taiti",
+   "pais": "Polinésia Francesa"
   },
   "nivel": "boa",
   "desconto": 0.517,
@@ -103,7 +111,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Roma",
+   "pais": "Itália"
   },
   "nivel": "boa",
   "desconto": 0.509,
@@ -125,11 +135,13 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Praga",
+   "pais": "Tchéquia"
   },
   "nivel": "boa",
   "desconto": 0.5,
-  "base": 4519.0,
+  "base": 4519.5,
   "z": 6.55,
   "fonte_base": "lote"
  },
@@ -147,7 +159,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Roma",
+   "pais": "Itália"
   },
   "nivel": "boa",
   "desconto": 0.486,
@@ -169,12 +183,14 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Copenhague",
+   "pais": "Dinamarca"
   },
   "nivel": "boa",
   "desconto": 0.477,
   "base": 4110.0,
-  "z": 10.37,
+  "z": 10.33,
   "fonte_base": "lote"
  },
  {
@@ -191,7 +207,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Viena",
+   "pais": "Áustria"
   },
   "nivel": "boa",
   "desconto": 0.476,
@@ -213,7 +231,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Roma",
+   "pais": "Itália"
   },
   "nivel": "boa",
   "desconto": 0.462,
@@ -235,7 +255,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Florença",
+   "pais": "Itália"
   },
   "nivel": "boa",
   "desconto": 0.461,
@@ -257,7 +279,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Miami",
+   "pais": "Estados Unidos"
   },
   "nivel": "boa",
   "desconto": 0.459,
@@ -279,7 +303,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Londres",
+   "pais": "Reino Unido"
   },
   "nivel": "boa",
   "desconto": 0.45,
@@ -301,7 +327,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Amsterdã",
+   "pais": "Países Baixos"
   },
   "nivel": "boa",
   "desconto": 0.443,
@@ -323,7 +351,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Chicago",
+   "pais": "Estados Unidos"
   },
   "nivel": "boa",
   "desconto": 0.437,
@@ -345,12 +375,14 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Viena",
+   "pais": "Áustria"
   },
   "nivel": "boa",
   "desconto": 0.435,
   "base": 4043.0,
-  "z": 2.34,
+  "z": 2.33,
   "fonte_base": "lote"
  },
  {
@@ -367,7 +399,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Berlim",
+   "pais": "Alemanha"
   },
   "nivel": "boa",
   "desconto": 0.419,
@@ -389,7 +423,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Vancouver",
+   "pais": "Canadá"
   },
   "nivel": "boa",
   "desconto": 0.418,
@@ -411,7 +447,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Amsterdã",
+   "pais": "Países Baixos"
   },
   "nivel": "boa",
   "desconto": 0.412,
@@ -433,7 +471,9 @@
   "coletado_em": "",
   "faixa_tipica": null,
   "extra": {
-   "price_level": null
+   "price_level": null,
+   "cidade": "Harbin",
+   "pais": "China"
   },
   "nivel": "boa",
   "desconto": 0.408,
